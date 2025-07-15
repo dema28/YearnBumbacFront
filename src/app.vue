@@ -2,7 +2,7 @@
     import {useInputUserName} from '@features/useInputUserName';
 
     const _x = '123';
-    const name = ref('');
+    const name = ref<string>('');
 
     onMounted(() => {
         name.value = useInputUserName();

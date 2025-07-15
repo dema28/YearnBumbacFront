@@ -1,3 +1,3 @@
-export const useInputUserName = (): null | string => {
+export const useInputUserName = (): string => {
     return 'John';
 };
