@@ -40,6 +40,9 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
+      - name: Prepare Nuxt
+        run: npx nuxi prepare
+
       - name: Run ESLint
         run: npm run lint
 
