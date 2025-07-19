@@ -1,6 +1,6 @@
 on: [push]
 jobs:
-  Code-Quality:
+  Install-dependencies:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -10,8 +10,16 @@ jobs:
           node-version: '20.x'
       - name: Install dependencies
         run: npm install
-      - name: Eslint
-        run: npm run lint
-      - name: Typecheck
-        run: npm run typecheck
+  Eslint:
+    needs: Install-dependencies
+    runs-on: ubuntu-latest
+    steps:
+     - name: Eslint
+       run: npm run lint
+  Typecheck:
+    needs: Install-dependencies
+    runs-on: ubuntu-latest
+    steps:
+     - name: Typecheck
+       run: npm run typecheck
 
