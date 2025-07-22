@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     modules: [
         '@nuxt/eslint',
         '@nuxt/test-utils',
-        '@nuxtjs/i18n'
+        '@nuxtjs/i18n',
+        '@nuxt/test-utils/module'
     ],
 
     i18n: {
