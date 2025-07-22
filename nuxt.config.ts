@@ -5,10 +5,13 @@ import {fileURLToPath} from 'node:url';
 export default defineNuxtConfig({
     compatibilityDate: '2025-05-15',
     devtools: { enabled: true },
-    modules: ['@nuxt/eslint', '@nuxt/test-utils', '@nuxtjs/i18n'],
+    modules: [
+        '@nuxt/eslint',
+        '@nuxtjs/i18n',
+        '@nuxt/test-utils/module'
+    ],
 
     i18n: {
-        langDir: '../src/plugins/i18n/locales',
         defaultLocale: 'en',
         locales: [
             {code: 'en', name: 'English', file: 'en.json'},

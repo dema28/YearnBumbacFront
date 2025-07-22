@@ -1,31 +1,55 @@
 # YearnBumbacFront
 Репозиторий для Frontend nuxt
 
+## Оглавление
+
+- [Документация nuxt](#nuxt-minimal-starter)
+- [Локальная разработка](#локальная-разработка)
+- [Продакшн сборка](#production)
+- [Описание ci/cd](#описание-cicd)
+
 ---
 
-# Nuxt Minimal Starter
+## Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
+---
 
-Make sure to install dependencies:
+# Локальная разработка
 
 ```bash
 # npm
 npm install
-```
 
-## Development Server
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+# Start the development server on `http://localhost:3000`:
 npm run dev
 ```
 
-## Production
+# Описание CI/CD
+
+## quality
+
+Запускается при пуше в любую ветку
+
+### install 
+
+Устанавливает необходимые зависимости
+
+### eslint
+
+Проверяется папку src на соответсвие eslint правилам
+
+### typecheck
+
+Проверяется папку src на правильность типов
+
+### test
+
+Запускает все тесты (.spec.ts) в провекте 
+
+# Production
 
 Build the application for production:
 
