@@ -83,5 +83,8 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
-      - name: Typecheck
+      - name: Prepare Nuxt
+        run: npx nuxi prepare
+
+      - name: Test
         run: npm run test:run
