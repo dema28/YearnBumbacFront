@@ -17,7 +17,15 @@ export default defineNuxtConfig({
             {code: 'en', name: 'English', file: 'en.json'},
             {code: 'ru', name: 'Russian', file: 'ru.json'},
             {code: 'ro', name: 'Romanian', file: 'ro.json'},
-        ]
+        ],
+        bundle: {
+            optimizeTranslationDirective: false,
+        },
+    },
+
+    hooks: {
+        'prepare:types'() {
+        },
     },
 
     css: ['~/assets/css/main.css'],
