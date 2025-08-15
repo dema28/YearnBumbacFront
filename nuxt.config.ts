@@ -23,6 +23,9 @@ export default defineNuxtConfig({
     css: ['~/assets/css/main.css'],
     srcDir: 'src',
     vite: {
+    	server: {
+      	  allowedHosts: ['qscfgrt657.duckdns.org', 'localhost']
+    	},
         plugins: [
             tailwindcss(),
         ],
